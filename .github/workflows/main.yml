@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Curl request
         run: >
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"New piece of content ready for review. <@U01C93BK76V>"}' https://hooks.slack.com/services/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
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"New piece of content ready for review."}' https://hooks.slack.com/services/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
