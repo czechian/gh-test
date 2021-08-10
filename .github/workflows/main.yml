@@ -1,0 +1,15 @@
+# .github/workflows/ready-to-review.yml
+
+name: PR ready for review Slack notification
+on:
+  pull_request:
+    types: [labeled]
+jobs:
+  build:
+    name: Piece of content ready for review
+    if: ${{ github.event.label.name == 'test' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        run: >
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"New piece of content ready for review. <@U01C93BK76V>"}' https://hooks.slack.com/services/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
